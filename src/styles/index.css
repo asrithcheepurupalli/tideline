@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Tideline — design tokens
+   A tidal, data-as-poetry world. Wet sand + deep water + a
+   living tide-line that draws itself across the page. The
+   "signal" is phosphor aqua — the colour of a wave breaking at
+   night. A warm coral marks the catch. Built on the made.
+   studio DNA (Fraunces / Hanken / Space Mono, the made. easing).
+   ============================================================ */
+
+@theme {
+  /* surfaces — wet sand & sea foam, deep water ink */
+  --color-paper: #f0ebe1;       /* primary wet-sand surface */
+  --color-paper-dim: #e6dfd1;   /* secondary surface */
+  --color-paper-line: #d3c9b6;  /* hairline on sand */
+  --color-ink: #06181d;         /* deep-water near-black + text on sand */
+  --color-ink-soft: #0a2228;    /* raised dark surface (shoal) */
+  --color-ink-line: #143038;    /* hairline on water */
+
+  /* the signal — a wave breaking at night. one tide colour. */
+  --color-signal: #14c0b0;      /* phosphor aqua / tideline */
+  --color-signal-deep: #0a948a;
+  --color-signal-soft: #8fe6dd;
+
+  /* the catch — warm coral, the buoy on the water */
+  --color-catch: #e8643c;
+  --color-catch-soft: #f3a98e;
+
+  /* rope / manila — provenance warmth */
+  --color-rope: #c2a878;
+  --color-rope-soft: #ddc9a4;
+
+  /* depth sounding (cool, technical) */
+  --color-depth: #1d6f9e;
+
+  /* greys for water surfaces */
+  --color-grey: #7e8a88;
+  --color-grey-dim: #9aa6a3;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+}
+
+:root {
+  --ease-made: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-card: 0.5rem;
+  color-scheme: light;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis owns scrolling */
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* keep native cursor on touch / fine-pointer-absent devices */
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+}
+
+/* ---------------------------------------------------------- type helpers */
+.label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.6875rem;
+  line-height: 1;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+.serif-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------- kinetic lines */
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+.line-inner {
+  display: block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+/* ---------------------------------------------------------- page transition */
+.page-enter {
+  animation: pageIn 0.7s var(--ease-made) both;
+}
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------- scroll reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(26px);
+  will-change: transform, opacity;
+}
+.reveal-in {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.85s var(--ease-made), transform 0.85s var(--ease-made);
+}
+
+/* ---------------------------------------------------------- bathymetric grid */
+.depth-grid {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-ink) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-ink) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+}
+.depth-grid-ink {
+  background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, #fff 5%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, #fff 5%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+}
+
+/* chart depth contours — faint stacked sine bands */
+.contour {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 22px,
+    color-mix(in srgb, var(--color-depth) 9%, transparent) 22px,
+    color-mix(in srgb, var(--color-depth) 9%, transparent) 23px
+  );
+}
+
+/* dotted measure marks (sounding ticks) */
+.tick-row {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-ink) 28%, transparent) 1px,
+    transparent 1.4px
+  );
+  background-size: 16px 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* ---------------------------------------------------------- magnetic / cta */
+.signal-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  background: var(--color-signal);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  padding: 1.05rem 1.7rem;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: background 0.4s var(--ease-made);
+}
+.signal-btn:hover {
+  background: var(--color-signal-deep);
+  color: #fff;
+}
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  border: 1px solid currentColor;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  padding: 1.05rem 1.7rem;
+  border-radius: 2px;
+  transition: background 0.4s var(--ease-made), color 0.4s var(--ease-made);
+}
+
+/* ---------------------------------------------------------- misc */
+.hairline {
+  background: var(--color-paper-line);
+  height: 1px;
+  width: 100%;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    opacity: 1;
+    transform: none;
+  }
+  .line-inner {
+    transform: none;
+  }
+  .page-enter {
+    animation: none;
+  }
+  body {
+    cursor: auto;
+  }
+}
