@@ -27,7 +27,7 @@ export default function Problem() {
         </h2>
         <p className="reveal-up mt-6 max-w-[52ch] text-lg text-ink/65">
           Every one of them takes a margin and a day. The fish gets older and
-          the price triples on its way to you — and the skipper who caught it
+          the price triples on its way to you. The skipper who caught it
           sees the smallest cut of all.
         </p>
 

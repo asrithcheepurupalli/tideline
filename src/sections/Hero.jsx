@@ -117,7 +117,7 @@ export default function Hero() {
           style={{ transform: "translateY(12px)" }}
         >
           By the time most fish reaches a plate it has passed five hands and three
-          days. Tideline is the marketplace for the in-between — book a seat on a
+          days. Tideline is the marketplace for the in-between. Book a seat on a
           working boat, or claim a share of the landing, direct from the skipper
           at the dock price.
         </div>

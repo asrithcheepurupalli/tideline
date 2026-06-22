@@ -5,7 +5,7 @@ import WaveLine from "./WaveLine";
 // One-click, pre-written email to the studio — for anyone who wants this built.
 const BUILD_MAIL =
   "mailto:thebrain@made-by-ac.com?subject=" +
-  encodeURIComponent("Tideline — build this with us") +
+  encodeURIComponent("Tideline: build this with us") +
   "&body=" +
   encodeURIComponent(
     "Hi made. team,\n\nI saw Tideline and I'd love to talk about building something like it (or working together).\n\nWhat I have in mind:\n\n\nThanks,\n"
@@ -102,7 +102,7 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
           <p className="label text-grey">
-            © 2026 Tideline — The marketplace for the day's catch
+            © 2026 Tideline · The marketplace for the day's catch
           </p>
           <p className="label text-grey">Concept demo · not a live marketplace</p>
         </div>

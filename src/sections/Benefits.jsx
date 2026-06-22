@@ -5,7 +5,7 @@ const TABS = {
   eaters: {
     label: "For eaters",
     items: [
-      ["Fresher than fresh", "Fish you can trace to a boat and a tide — landed hours ago, not days."],
+      ["Fresher than fresh", "Fish you can trace to a boat and a tide, landed hours ago, not days."],
       ["The dock price", "Pay what the agent pays. The spread that used to vanish into the chain stays in your pocket."],
       ["Provenance you can read", "Every catch comes with the skipper, the gear, the position and the landing time."],
       ["A day at sea", "Or take the seat and go get it yourself. The catch tastes different when you hauled it."],
@@ -17,7 +17,7 @@ const TABS = {
       ["Sell before you sail", "Reserve shares at the dock price before the boat leaves. Land the catch already sold."],
       ["Keep the margin", "Earn more per kilo than the auction pays, without losing the buyer to four middlemen."],
       ["Fill empty seats", "Turn unused deck space into income on days the hold isn't full."],
-      ["Your name on the catch", "Build a following that asks for your boat by name — provenance is the new premium."],
+      ["Your name on the catch", "Build a following that asks for your boat by name. Provenance is the new premium."],
     ],
   },
 };

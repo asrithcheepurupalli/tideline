@@ -30,7 +30,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Tomorrow ~18:30",
     blurb:
-      "Silver pomfret off the Mumbai shelf, hauled before dawn and iced on deck. Mahesh has run this stretch for nineteen seasons — the fish is on the dock before the city is awake.",
+      "Silver pomfret off the Mumbai shelf, hauled before dawn and iced on deck. Mahesh has run this stretch for nineteen seasons, and the fish is on the dock before the city is awake.",
     tone: "#14c0b0",
   },
   {
@@ -59,7 +59,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Today ~16:00",
     blurb:
-      "A working seiner off Malpe pulling shoaling mackerel and oil sardine. No passengers on a seiner — but claim a share and it's bagged, weighed and waiting under your name at the landing.",
+      "A working seiner off Malpe pulling shoaling mackerel and oil sardine. No passengers on a seiner, but claim a share and it's bagged, weighed and waiting under your name at the landing.",
     tone: "#1d6f9e",
   },
   {
@@ -88,7 +88,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Tomorrow ~15:00",
     blurb:
-      "Line-bright seer fish off the Kerala drop-off. Antony takes three aboard the vallam — go out with the crew, learn the ring seine, come back with the catch you watched land.",
+      "Line-bright seer fish off the Kerala drop-off. Antony takes three aboard the vallam. Go out with the crew, learn the ring seine, come back with the catch you watched land.",
     tone: "#e8643c",
   },
   {
@@ -117,7 +117,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Tomorrow ~17:30",
     blurb:
-      "Tiger prawn off the Vizag shelf, graded by hand on the deck. The export agents queue for this boat — a share routes a box of it to your table instead, at the price they pay.",
+      "Tiger prawn off the Vizag shelf, graded by hand on the deck. The export agents queue for this boat, so a share routes a box of it to your table instead, at the price they pay.",
     tone: "#14c0b0",
   },
   {
@@ -146,7 +146,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Today ~14:30",
     blurb:
-      "Hand-lined reef fish and live mud crab in the Palk Bay shallows. A small, shallow-draft boat and the calmest water on this list — the gentle introduction to a day at sea.",
+      "Hand-lined reef fish and live mud crab in the Palk Bay shallows. A small, shallow-draft boat and the calmest water on this list: the gentle introduction to a day at sea.",
     tone: "#c2a878",
   },
   {
@@ -175,7 +175,7 @@ export const listings = [
     moon: "Waning gibbous",
     landing: "Tomorrow ~14:00",
     blurb:
-      "Trolling the Goan blue water for kingfish and snapper off Betul. Caetano runs the friendliest deck on the coast — four seats, a flask of feni-spiked chai, and a horizon with nothing on it.",
+      "Trolling the Goan blue water for kingfish and snapper off Betul. Caetano runs the friendliest deck on the coast: four seats, a flask of feni-spiked chai, and a horizon with nothing on it.",
     tone: "#1d6f9e",
   },
 ];

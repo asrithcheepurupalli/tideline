@@ -4,7 +4,7 @@ const STEPS = [
   {
     n: "01",
     t: "Read the tide",
-    d: "Browse the boats sailing tomorrow — species, gear, sea state and the skipper behind the wheel. Every listing is a real working vessel on a real harbour.",
+    d: "Browse the boats sailing tomorrow: species, gear, sea state and the skipper behind the wheel. Every listing is a real working vessel on a real harbour.",
   },
   {
     n: "02",
@@ -14,12 +14,12 @@ const STEPS = [
   {
     n: "03",
     t: "The boat sails",
-    d: "The skipper works the water. You get the position, the haul and the landing time as it happens — the day unfolding from the deck to your phone.",
+    d: "The skipper works the water. You get the position, the haul and the landing time as it happens, the day unfolding from the deck to your phone.",
   },
   {
     n: "04",
     t: "Collect the catch",
-    d: "Walk the dock and pick it up cleaned, or have it cold-chained to your door. Off the boat, onto your table — with nothing in between but the tide.",
+    d: "Walk the dock and pick it up cleaned, or have it cold-chained to your door. Off the boat, onto your table, with nothing in between but the tide.",
   },
 ];
 
