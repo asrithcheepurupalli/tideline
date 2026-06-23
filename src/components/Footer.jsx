@@ -10,6 +10,11 @@ const BUILD_MAIL =
   encodeURIComponent(
     "Hi made. team,\n\nI saw Tideline and I'd love to talk about building something like it (or working together).\n\nWhat I have in mind:\n\n\nThanks,\n"
   );
+const BUILD_WA =
+  "https://wa.me/919390852636?text=" +
+  encodeURIComponent(
+    "Hi made. by ac 👋 I saw Tideline and I'd love to build something like it with you."
+  );
 
 /**
  * Footer drawn as a harbour log-book entry — the day's manifest cartouche from
@@ -95,6 +100,15 @@ export default function Footer() {
                 className="text-sm text-[var(--color-signal)] hover:underline"
               >
                 Build this with us →
+              </a>
+              <a
+                href={BUILD_WA}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="Chat"
+                className="text-sm text-grey hover:text-[var(--color-signal)]"
+              >
+                or WhatsApp us →
               </a>
             </div>
           </div>
