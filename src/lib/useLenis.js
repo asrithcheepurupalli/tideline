@@ -13,6 +13,10 @@ export function useLenis() {
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
+    // Desktop only. On touch, Lenis fights native momentum scrolling (dead,
+    // stop-mid-flick scroll on phones). Mobile uses native scroll, and GSAP
+    // ScrollTrigger updates on the native scroll position as usual.
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
     const lenis = new Lenis({
       duration: 1.15,
