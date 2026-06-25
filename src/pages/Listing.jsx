@@ -23,7 +23,7 @@ export default function Listing() {
 
   if (!boat) {
     return (
-      <div className="flex min-h-[70vh] flex-col items-center justify-center bg-paper px-6 text-center">
+      <div className="flex min-h-[70svh] flex-col items-center justify-center bg-paper px-6 text-center">
         <h1 className="display text-4xl text-ink">That boat has sailed.</h1>
         <Link to="/catch" className="signal-btn mt-8">Back to today's landings →</Link>
       </div>
