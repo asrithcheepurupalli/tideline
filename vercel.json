@@ -1,3 +1,16 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/catch",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/boat/:id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/skipper",
+      "destination": "/index.html"
+    }
+  ]
 }
